@@ -3,44 +3,38 @@ import './App.css';
 import AuthProvider from './Components/Hooks/AuthProvider';
 import Home from './Components/Pages/Home/Home';
 import Login from './Components/Pages/Login/Login';
-import ManageOrder from './Components/Pages/MangeOrder/ManageOrder';
+import Dashboard from './Components/Pages/MangeOrder/Dashboard';
 import NotFound from './Components/Pages/NotFound/NotFound';
-import Footer from './Components/Pages/Shered/Footer/Footer';
-import Header from './Components/Pages/Shered/Header/Header';
-import AddTours from './Components/Pages/TourPlaces/AddTours';
+
 import ToursDeatils from './Components/Pages/TourPlaces/ToursDeatils';
 import PrivetRoute from './Components/PrivetRoute/PrivetRoute';
 
 function App() {
 	return (
-		<div className="App">
+		<div className='App'>
 			<AuthProvider>
 				<BrowserRouter>
-					<Header />
 					<Switch>
-						<Route exact path="/">
+						<Route exact path='/'>
 							<Home />
 						</Route>
-						<Route path="/home">
+						<Route path='/home'>
 							<Home />
 						</Route>
-						<Route path="/login">
+						<Route path='/login'>
 							<Login />
 						</Route>
-						<PrivetRoute path="/tourdetail/:id">
+						<PrivetRoute path='/tourdetail/:id'>
 							<ToursDeatils />
 						</PrivetRoute>
-						<PrivetRoute path="/addtours">
-							<AddTours />
+
+						<PrivetRoute path='/dashboard'>
+							<Dashboard />
 						</PrivetRoute>
-						<PrivetRoute path="/manageorder">
-							<ManageOrder />
-						</PrivetRoute>
-						<Route path="*">
+						<Route path='*'>
 							<NotFound />
 						</Route>
 					</Switch>
-					<Footer />
 				</BrowserRouter>
 			</AuthProvider>
 		</div>
