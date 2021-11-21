@@ -1,0 +1,92 @@
+[
+    {
+        "Destination": "Goa",
+        "Description": "Goa is a part of the coastal country known as the Konkan, which is an escarpment rising up to the Western Ghats range of mountains, which separate it from the Deccan Plateau. The highest point is the Sonsogor, with an altitude of 1,167 metres (3,829 ft). Goa",
+        "Venu": "Dhaka to Goa",
+        "Date": "10/10/22",
+        "Price": 100,
+        "Membar": 2,
+        "Banner": "https://i.ibb.co/jLBpdhx/Goa.jpg"
+
+    },
+    {
+        "Destination": "Bangkok",
+        "Description": "Bangkok, Thai Krung Thep, city, capital, and chief port of Thailand. It is the only cosmopolitan city in a country of small towns and villages and is Thailand's cultural and commercial centre. The Grand Palace, Bangkok, Thailand. Bangkok.",
+        "Venu": "Dhaka to Bangkok",
+        "Date": "5/10/22",
+        "Price": 150,
+        "Membar": 2,
+        "Banner": "https://i.ibb.co/N6QBbtR/bankok.jpg"
+
+    },
+    {
+        "Destination": "Hawaii",
+        "Description": "Hawaii is the world's largest island chain, and it's the only U.S. state completely made up of islands. But only 7 of its 132 islands are inhabited: Hawaii (also known as the Big Island), Maui, Molokai, Lanai, Oahu, Kauai, and Niihau. ... Hawaii is known for its beautiful beaches—some of them with unusual colors.",
+        "Venu": "Dhaka to Hawaii",
+        "Date": "8/10/22",
+        "Price": 100,
+        "Membar": 1,
+        "Banner": "https://i.ibb.co/F7gHbgW/hawaii.jpg"
+
+    },
+    {
+        "Destination": "Hvar",
+        "Description": "Hvar is a Croatian island in the Adriatic Sea, located off the Dalmatian coast, lying between the islands of Brač, Vis and Korčula. ... It has been inhabited since pre-historic times, originally by a Neolithic people whose distinctive pottery gave rise to the term Hvar Culture, and later by the Illyrians.",
+        "Venu": "Dhaka to Hvar",
+        "Date": "6/11/22",
+        "Price": 120,
+        "Membar": 1,
+        "Banner": "https://i.ibb.co/RHB8Kwr/Hvar.jpg"
+
+    },
+    {
+        "Destination": "WhiteHeaven",
+        "Description": "Whitehaven is a town and port on the west coast of Cumbria, near the Lake District National Park in England. ... It was also a major port for trading with the American colonies, and was, after London, the second busiest port of England by tonnage from 1750 to 1772.",
+        "Venu": "Dhaka to Whitehaven",
+        "Date": "7/11/22",
+        "Price": 130,
+        "Membar": 1,
+        "Banner": "https://i.ibb.co/XYP8rZw/whitehaven.jpg"
+
+    },
+    {
+        "Destination": "Bali",
+        "Description": "Also known as the Land of the Gods, Bali appeals through its sheer natural beauty of looming volcanoes and lush terraced rice fields that exude peace and serenity. ... Bali enchants with its dramatic dances and colorful ceremonies, its arts, and crafts, to its luxurious beach resorts and exciting nightlife.",
+        "Venu": "Dhaka to Bali",
+        "Date": "11/11/22",
+        "Price": 130,
+        "Membar": 1,
+        "Banner": "https://i.ibb.co/5vfxLHQ/bali.jpg"
+
+    },
+    {
+        "Destination": "Italy",
+        "Description": "Italy, country of south-central Europe, occupying a peninsula that juts deep into the Mediterranean Sea. Italy comprises some of the most varied and scenic landscapes on Earth and is often described as a country shaped like a boot. At its broad top stand the Alps, which are among the world's most rugged mountains.",
+        "Venu": "Dhaka to Italy",
+        "Date": "12/11/22",
+        "Price": 140,
+        "Membar": 1,
+        "Banner": "https://i.ibb.co/353WCnn/Magic-italy.jpg"
+
+    },
+    {
+        "Destination": "Mosco",
+        "Description": "Mosco (1996) refers to the institutional extension of corporate power in the communication industry or the concentration of ownership as specialization. Liberalization of Media in Pakistan: A Challenge to Democracy.",
+        "Venu": "Dhaka to Mosco",
+        "Date": "9/12/22",
+        "Price": 150,
+        "Membar": 1,
+        "Banner": "https://i.ibb.co/RyKs28s/mosco.jpg"
+
+    },
+    {
+        "Destination": "Rome",
+        "Description": "Rome is located on the western coast of central Italy along the Tevere River. The capital of the Lazio region is Italy's largest city with a population of 2,654,100 and over 2600 years of richness in art, history, architecture, monuments and culture.",
+        "Venu": "Dhaka to Rome",
+        "Date": "12/12/22",
+        "Price": 160,
+        "Membar": 1,
+        "Banner": "https://i.ibb.co/vdGzq1C/rome.jpg"
+
+    }
+]
