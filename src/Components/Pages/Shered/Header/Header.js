@@ -7,7 +7,6 @@ import {
 	faSignInAlt,
 	faSignOutAlt,
 	faBorderAll,
-	faPlus,
 } from '@fortawesome/free-solid-svg-icons';
 import UseAuth from '../../../Hooks/UseAuth';
 
@@ -16,7 +15,7 @@ const Header = () => {
 	const signInIcon = <FontAwesomeIcon icon={faSignInAlt} />;
 	const signOutIcon = <FontAwesomeIcon icon={faSignOutAlt} />;
 	const cartIcon = <FontAwesomeIcon icon={faBorderAll} />;
-	const plusIcon = <FontAwesomeIcon icon={faPlus} />;
+
 	return (
 		<Navbar bg='secondary' sticky='top' variant='dark' expand='lg'>
 			<Container>

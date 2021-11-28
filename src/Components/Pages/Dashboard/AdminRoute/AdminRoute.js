@@ -2,9 +2,8 @@ import React from 'react';
 import { Spinner } from 'react-bootstrap';
 import { Redirect, Route } from 'react-router';
 import UseAuth from '../Hooks/UseAuth';
-
-const PrivetRoute = ({ children, ...rest }) => {
-	const { user, loading } = UseAuth();
+const AdminRoute = ({ children, ...rest }) => {
+	const { user, loading, admin } = UseAuth();
 	if (loading) {
 		return (
 			<div className='position-relative'>
@@ -20,12 +19,12 @@ const PrivetRoute = ({ children, ...rest }) => {
 		<Route
 			{...rest}
 			render={({ location }) =>
-				user.email ? (
+				user.email && admin ? (
 					children
 				) : (
 					<Redirect
 						to={{
-							pathname: '/login',
+							pathname: '/dashboard',
 							state: { from: location },
 						}}></Redirect>
 				)
@@ -33,4 +32,4 @@ const PrivetRoute = ({ children, ...rest }) => {
 	);
 };
 
-export default PrivetRoute;
+export default AdminRoute;

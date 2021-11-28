@@ -4,24 +4,33 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import UseAuth from '../../Hooks/UseAuth';
 
-const Login = () => {
-	const { googleSignIn, signinWithEmail } = UseAuth();
+const Register = () => {
+	const { googleSignIn, registerWithEmail, loading, error } = UseAuth();
+	const [loginData, setLoginData] = useState({});
 	let history = useHistory();
 	let location = useLocation();
 	const rediret_url = location.state?.from || '/home';
-	const [loginData, setLoginData] = useState({});
-
-	const handleOnChange = (e) => {
+	// !  input handel
+	const handleOnBlur = (e) => {
 		const field = e.target.name;
 		const value = e.target.value;
 		const newLoginData = { ...loginData };
 		newLoginData[field] = value;
+		console.log(newLoginData);
 		setLoginData(newLoginData);
 	};
 
-	const handelEmailLogin = (e) => {
+	const handelRegister = (e) => {
 		e.preventDefault();
-		signinWithEmail(loginData.email, loginData.password, location, history);
+		registerWithEmail(
+			loginData.email,
+			loginData.password,
+			loginData.name,
+			history
+		);
+		if (loginData.email) {
+			return alert('Successfully Create  A Account');
+		}
 	};
 	const handelRdirectUrl = () => {
 		googleSignIn().then((result) => {
@@ -35,22 +44,29 @@ const Login = () => {
 			<div className='col-md-6 col-lg-6 col-xs-12 border border-secondary  mx-auto my-5  shadow '>
 				<div>
 					<div className='py-5 text-decoration-underline '>
-						<h2 className='fw-bold text-center'>Login With</h2>
+						<h2 className='fw-bold text-center'>Register With</h2>
 					</div>
 					<div style={{ width: '500px' }} className='mx-auto'>
-						<form onSubmit={handelEmailLogin}>
+						<form onSubmit={handelRegister}>
+							<input
+								className='form-control mb-3'
+								type='text'
+								onBlur={handleOnBlur}
+								name='name'
+								placeholder='Full Name'
+							/>
 							<input
 								className='form-control mb-3'
 								type='email'
+								onBlur={handleOnBlur}
 								name='email'
-								onChange={handleOnChange}
 								placeholder='email'
 							/>
 							<input
 								className='form-control mb-3'
 								type='password'
 								name='password'
-								onChange={handleOnChange}
+								onBlur={handleOnBlur}
 								placeholder='password'
 							/>
 							<input type='submit' className='btn btn-success' />
@@ -76,4 +92,4 @@ const Login = () => {
 	);
 };
 
-export default Login;
+export default Register;

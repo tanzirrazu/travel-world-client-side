@@ -6,6 +6,7 @@ import UseAuth from '../../Hooks/UseAuth';
 import { useForm } from 'react-hook-form';
 
 const ToursDeatils = () => {
+	const { register, reset, handleSubmit } = useForm();
 	const { id } = useParams();
 	const [toursDetail, setToursDetail] = useState([]);
 	const { user } = UseAuth();
@@ -15,10 +16,11 @@ const ToursDeatils = () => {
 			.then((data) => {
 				setToursDetail(data);
 			});
-	}, []);
-	const { register, reset, handleSubmit } = useForm();
+	}, [id, reset]);
 
 	const onSubmit = (data) => {
+		data.status = 'Pending';
+		delete data._id;
 		fetch('http://localhost:5000/orders', {
 			method: 'POST',
 			headers: { 'content-type': 'application/json' },
@@ -30,8 +32,6 @@ const ToursDeatils = () => {
 					alert('You Order Place Successfully');
 				}
 			});
-
-		reset();
 	};
 	return (
 		<div className='my-5 row container-fluid g-5'>
@@ -42,12 +42,12 @@ const ToursDeatils = () => {
 						<input
 							className='form-control mb-3   '
 							type='text'
-							value={user.displayName}
+							defaultValue={user.displayName}
 							{...register('Name')}
 						/>
 						<label>Email</label>
 						<input
-							value={user.email}
+							defaultValue={user.email}
 							className='form-control mb-3   '
 							type='email'
 							{...register('Email')}
@@ -104,7 +104,7 @@ const ToursDeatils = () => {
 						<input
 							className='form-control mb-3   '
 							type='text'
-							value={toursDetail.Banner}
+							defaultValue={toursDetail.Banner}
 							{...register('Banner', { required: true })}
 							readOnly
 						/>
@@ -112,7 +112,7 @@ const ToursDeatils = () => {
 						<input
 							className='form-control mb-3   '
 							type='number'
-							value={toursDetail.Price}
+							defaultValue={toursDetail.Price}
 							{...register('Price', { required: true })}
 							readOnly
 						/>
@@ -120,7 +120,7 @@ const ToursDeatils = () => {
 						<input
 							className='form-control mb-3   '
 							type='text'
-							value={toursDetail.Date}
+							defaultValue={toursDetail.Date}
 							{...register('Date')}
 							readOnly
 						/>
